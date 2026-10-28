@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Job Portal</h1>
+    <p>Find your next opportunity</p>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h2>Job Seeker Dashboard</h2>
+      <p>Search and apply for available job opportunities.</p>
+    </section>
+
+    <section class="account-section">
+    <h2>User Account</h2>
+
+    <div class="account-forms">
+        <form id="registerForm">
+            <h3>Create Account</h3>
+
+            <input
+                type="text"
+                id="registerName"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="registerEmail"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="password"
+                id="registerPassword"
+                placeholder="Password"
+                required
+            >
+
+            <button type="submit">Register</button>
+            <p id="registerMessage"></p>
+        </form>
+
+        <form id="loginForm">
+            <h3>Login</h3>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+                required
+            >
+
+            <button type="submit">Login</button>
+            <p id="loginMessage"></p>
+        </form>
+    </div>
+</section>
+
+    <section class="search-section">
+      <h2>Find Jobs</h2>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by job title..."
+        >
+
+        <select id="locationFilter">
+          <option value="">All Locations</option>
+          <option value="Johannesburg">Johannesburg</option>
+          <option value="Cape Town">Cape Town</option>
+          <option value="Durban">Durban</option>
+          <option value="Remote">Remote</option>
+        </select>
+
+        <button id="searchButton">Search</button>
+      </div>
+    </section>
+
+    <section class="post-job-section">
+  <h2>Post a Job</h2>
+  <p>Add a new job opportunity to the portal.</p>
+
+  <form id="jobForm">
+    <input
+      type="text"
+      id="jobTitle"
+      placeholder="Job Title"
+      required
+    >
+
+    <input
+      type="text"
+      id="company"
+      placeholder="Company Name"
+      required
+    >
+
+    <select id="jobLocation" required>
+      <option value="">Select Location</option>
+      <option value="Johannesburg">Johannesburg</option>
+      <option value="Cape Town">Cape Town</option>
+      <option value="Durban">Durban</option>
+      <option value="Remote">Remote</option>
+    </select>
+
+    <textarea
+      id="jobDescription"
+      placeholder="Job Description"
+      required
+    ></textarea>
+
+    <button type="submit">Post Job</button>
+  </form>
+
+  <p id="jobMessage"></p>
+</section>
+      <h2>Available Jobs</h2>
+
+      <div id="jobListings">
+        <div class="job-card">
+          <h3>Junior Web Developer</h3>
+          <p><strong>Company:</strong> Tech Solutions</p>
+          <p><strong>Location:</strong> Johannesburg</p>
+          <p>Assist with developing and maintaining web applications.</p>
+          <button class="apply-button">Apply Now</button>
+        </div>
+
+        <div class="job-card">
+          <h3>IT Support Technician</h3>
+          <p><strong>Company:</strong> Digital Systems</p>
+          <p><strong>Location:</strong> Cape Town</p>
+          <p>Provide technical support and troubleshoot IT issues.</p>
+          <button class="apply-button">Apply Now</button>
+        </div>
+
+        <div class="job-card">
+          <h3>Graduate Software Developer</h3>
+          <p><strong>Company:</strong> Future Tech</p>
+          <p><strong>Location:</strong> Remote</p>
+          <p>Join our development team and work on modern software projects.</p>
+          <button class="apply-button">Apply Now</button>
+        </div>
+      </div>
+    </section>
+    <section class="application-section" id="applicationSection" style="display: none;">
+  <h2>Apply for Job</h2>
+
+  <p id="selectedJob"></p>
+
+  <form id="applicationForm">
+    <input type="hidden" id="applicationJobId">
+
+    <input
+      type="text"
+      id="applicantName"
+      placeholder="Full Name"
+      required
+    >
+
+    <input
+      type="email"
+      id="applicantEmail"
+      placeholder="Email Address"
+      required
+    >
+
+    <input
+      type="tel"
+      id="applicantPhone"
+      placeholder="Phone Number"
+      required
+    >
+
+    <textarea
+      id="coverLetter"
+      placeholder="Write a short cover letter"
+      required
+    ></textarea>
+
+    <button type="submit">Submit Application</button>
+    <button type="button" id="cancelApplication">Cancel</button>
+  </form>
+
+  <p id="applicationMessage"></p>
+</section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
